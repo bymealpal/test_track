@@ -10,6 +10,7 @@ production: &env_var_config
   <<: *default
   url: <%= ENV['DATABASE_URL'] %>
   pool: <%= worker_count == 0 ? thread_count : worker_count * thread_count %>
+  schema_search_path: test_track, public
 stage:
   <<: *env_var_config
 test:
