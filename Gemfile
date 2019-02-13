@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '~> 5.0.0'
+gem 'rails', '~> 5.1.6'
 # Use postgresql as the database for Active Record
 gem 'pg'
 # Use SCSS for stylesheets
@@ -9,7 +9,7 @@ gem 'sass-rails'
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
 # Use CoffeeScript for .coffee assets and views
-gem 'coffee-rails', '~> 4.1.0'
+gem 'coffee-rails', '~> 4.2.0'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 gem 'therubyracer', platforms: :ruby
 
@@ -29,9 +29,10 @@ gem 'responders'
 
 gem 'rack-timeout'
 
-gem 'airbrake', '~> 4.3.2'
+gem 'airbrake', '~> 7.3.5'
 
 gem 'newrelic_rpm'
+gem 'ddtrace'
 
 gem 'rails_semantic_logger', require: false
 
@@ -50,6 +51,8 @@ gem 'foreman'
 gem 'delayed_job'
 gem 'delayed_job_active_record'
 
+gem 'with_transactional_lock'
+
 group :development, :test do
   gem 'simplecov', require: false
   gem 'pry-rails'
@@ -57,7 +60,7 @@ group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
   gem 'rspec-rails'
-  gem 'rubocop'
+  gem 'rubocop-betterment'
 
   gem 'dotenv-rails'
 

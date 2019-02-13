@@ -13,7 +13,9 @@ class GroupedCollectionSelectInput < SimpleForm::Inputs::GroupedCollectionSelect
 
   def selected_option
     current_value = object.public_send(attribute_name)
-    @_selected ||= collections.find { |option| option_value(option) == current_value || option == current_value } # rubocop:disable Metrics/LineLength, Naming/MemoizedInstanceVariableName
+    # rubocop:disable Naming/MemoizedInstanceVariableName
+    @_selected ||= collections.find { |option| option_value(option) == current_value || option == current_value }
+    # rubocop:enable Naming/MemoizedInstanceVariableName
   end
 
   def collections
