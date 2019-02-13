@@ -52,6 +52,7 @@ gem 'delayed_job'
 gem 'delayed_job_active_record'
 
 gem 'with_transactional_lock'
+gem 'rb-readline'
 
 group :development, :test do
   gem 'simplecov', require: false
