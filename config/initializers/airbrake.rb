@@ -1,6 +1,6 @@
 if ENV['AIRBRAKE_API_KEY'].present?
   Airbrake.configure do |config|
-    config.project_id = ENV['AIRBRAKE_API_KEY']
+    config.project_id = ENV['AIRBRAKE_PROJECT_ID'] || ENV['AIRBRAKE_API_KEY']
     config.project_key = ENV['AIRBRAKE_API_KEY']
 
     if ENV['AIRBRAKE_HOST'].present?
